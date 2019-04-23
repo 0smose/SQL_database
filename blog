@@ -1,0 +1,130 @@
+
+EXO BLOG :
+
+TABLE USER  : 
+id = integer >>>1, 2, 3, ...
+
+name = string >>>> "robin", "caro", "françois", ...
+
+----------------------------------------------
+
+TABLE ARTICLES : 
+id = integer >>>> 1, 2, 3, ...
+
+user_id = integer >>> 1, 1, 3, ... ici l'user 1 (robin) a écrit les 2 premiers articles
+
+--------------------------------------------------
+
+TABLE CATEGORIE :
+id = integer >>> 1, 2, 3, ...
+
+id_article = integer >>> 1-2-3, 1, 3, ... Ici, les articles 1, 2 et 3 appartiennent à la catégorie 1, donc sport. L'article 1 appartient aussi
+à la catégorie People (2) car on parle de Neymar blablabla. L'article 3 appartient à la cétégorie actu (3) : on parle de notre dame qui brûle.
+
+titre = string >>> "Sport", "People", "Actu", ...
+
+------------------------------------
+
+TABLES TAG : 
+
+id = integer >>> 1, 2, 3, ...
+id_catégorie = integer >>>1, 2, 3, ...
+titre = string >>> "FUN", "MEME", "VIDEO", ...
+couleur = string >>> "VERT", "ORANGE", "BLEU", ...
+
+Exemple : la catégorie sport(id_catég = 1) peut avoir plusieurs tags, par exemple video(id = 3) s'il s'agit d'un extrait de match, 
+ou bien le tag meme s'il s'agit de détourner une vidéo de sport pour faire rire etc. 
+
+
+
+EXO MOOCADEMY : 
+
+TABLE COURS :
+id integer 1,2,3 ...
+titre string "cybersécurité", "neurosciences", "blabblabal"
+descriptino string "bablbalbalbalbalbalal" ....
+
+-----------------------------------
+TABLE LECONS : 
+id integer
+id_cours integer
+titre string "intro à la cybersécurité", "pirater la nasa"...
+body string "bablablablabla" 
+
+Un cours peut avoir plusieurs leçon mais une leçon n'appartient qu'à un seul cours.
+
+
+EXO THE HACKING PINTEREST
+
+TABLE USER 
+id nom
+
+------------------------------------
+
+TABLE PINS
+id id_user url_image
+
+un user peut poster plusieurs liens, un lien n'a qu'un auteur. On peut retrouver l'auteur d'un lien grâce à son id.
+
+-----------------------------------------
+
+TABLE COMMMENTAIRE :
+id id_url contenu Auteur
+un commentaire n'est relatif qu'à un lien. Un lien peut avoir plusieurs commentaires. 
+Un auteur peut poster plusieurs comm, un comm n'a qu'un auteur.
+
+
+EXO THE HACKING NEWS
+
+TABLE USER
+id nom
+
+------------------------------------
+
+TABLE LIEN
+
+ID id_user url
+un lien n'a qu'un user mais un user peut poser plusieurs liens
+
+----------------------------------------------
+
+TABLE COMMENTS :
+
+id id_url contenu user_id
+id_url : quel lien a été commenté
+user_id : qui commente? 
+
+un commentaire n'et relatif qu'à un lien. Un lien peut avoir plusieurs comms.
+
+----------------------------------------------
+
+TABLE SOUS COMM : 
+
+id id_comm contenu id_auteur
+un sous comm n'est relatif qu'à un comm.
+Un comme peut avoir plusieurs sous comm. 
+On peut identifer quel lien a été commenté par l'id du comm, car dans sa table on a l'id de l'url.
+
+
+
+EXO THE HACKING CLASS
+
+TABLE ELEVE 
+
+id nom
+
+------------------------------
+table cours 
+id id_user nom
+ ici un cours peut avoir plusieurs eleves mais un eleve ne peut choisir qu'un cours. 
+
+
+
+
+
+
+
+
+
+
+
